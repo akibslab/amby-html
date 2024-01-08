@@ -1,0 +1,276 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+	/*===== Colors =====*/
+	--color-white: #ffffff;
+	--color-black: #111827;
+	--color-primary: #ff6301;
+	--color-text-primary: #111827;
+	--color-text-secondary: #6b7280;
+	--color-placeholder: #9ca3af;
+	--color-border: #9ca3af;
+	--color-red: #ee1d1d;
+
+	/*===== Font and typography =====*/
+	--body-font: "Poppins", sans-serif;
+
+	/*===== Font weight =====*/
+	--font-light: 300;
+	--font-normal: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+	--font-black: 800;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+	font-size: 14px;
+	font-weight: var(--font-normal);
+	background-color: var(--color-white);
+	color: var(--color-text-secondary);
+	line-height: 1.5;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+	margin: 0 0 15px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: var(--font-semi-bold);
+	color: var(--color-text-primary);
+	line-height: 1.2;
+}
+
+h1 {
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 22px;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*===== LAYOUT =====*/
+.container {
+	max-width: 540px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.row {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.col {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.text-center {
+	text-align: center;
+}
+.text-start {
+	text-align: left;
+}
+.text-end {
+	text-align: right;
+}
+
+/* default CSS */
+label {
+	display: block;
+	font-size: 12px;
+	line-height: 1;
+	color: var(--color-text-primary);
+	font-weight: var(--font-semi-bold);
+	margin-bottom: 4px;
+}
+
+select,
+.nice-select,
+input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]),
+textarea {
+	border: 1px solid var(--color-border);
+	width: 100%;
+	height: auto;
+	outline: none;
+	background-color: var(--color-white);
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: var(--font-medium);
+	color: var(--color-text-primary);
+	padding: 18px 12px;
+}
+::-ms-input-placeholder {
+	color: var(--color-placeholder);
+}
+
+::-webkit-input-placeholder {
+	color: var(--color-placeholder);
+}
+
+::-moz-placeholder {
+	color: var(--color-placeholder);
+}
+
+:-ms-input-placeholder {
+	color: var(--color-placeholder);
+}
+
+::placeholder {
+	color: var(--color-placeholder);
+}
+label.error {
+	color: var(--color-red);
+	font-weight: var(--font-medium);
+	margin-bottom: 0;
+	position: relative;
+	z-index: 1;
+	padding-left: 18px;
+	margin-top: 15px;
+}
+label.error::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 12px;
+	height: 12px;
+	background-image: url(../images/icons/close.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.primary-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	transition: 0.5s ease;
+	z-index: 1;
+	font-size: 15px;
+	color: var(--color-white);
+	font-weight: var(--font-semi-bold);
+	padding: 15px 13px;
+	border: none;
+	border-radius: 8px;
+	background-color: var(--color-primary);
+}
+
+/**----------------------------------------
+START: Page Header
+----------------------------------------*/
+.page {
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+.app_logo .logo {
+	display: inline-block;
+	max-width: 107px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header_content {
+	font-size: 18px;
+	font-weight: var(--font-medium);
+	color: var(--color-white);
+}
+.header_content p:last-child {
+	margin-bottom: 0;
+}
+.page.login-page {
+	background-color: var(--color-primary);
+}
+.login-page .page_header {
+	margin-bottom: 33px;
+}
+/* !END: Page Header */
+
+/**----------------------------------------
+START: Login Register Form
+----------------------------------------*/
+.login_register_form {
+	background-color: var(--color-white);
+	padding: 32px 25px;
+	border-radius: 8px;
+}
+.login_register_form .form_title {
+	margin-bottom: 16px;
+}
+.login_register_form .form_desc {
+	margin-bottom: 24px;
+}
+.login_register_form .form_desc p:last-child {
+	margin-bottom: 0;
+}
+.form_group {
+	margin-bottom: 15px;
+}
+.form_btn {
+	margin-top: 20px;
+}
+.login_register_form .form_btn .primary-btn {
+	width: 100%;
+}
+.login-page .app_domain {
+	margin-top: 60px;
+}
+.app_domain .domain {
+	text-transform: uppercase;
+	color: var(--color-white);
+	margin-bottom: 0;
+}
+/* !END: Login Register Form */
+
+/**----------------------------------------
+START: Page Header
+----------------------------------------*/
+
+/* !END: Page Header */
