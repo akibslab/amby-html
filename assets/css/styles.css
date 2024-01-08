@@ -70,12 +70,22 @@ h6 {
 }
 
 h1 {
+	font-size: 28px;
 }
 h2 {
 	font-size: 24px;
 }
 h3 {
 	font-size: 22px;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-size: 16px;
+}
+h6 {
+	font-size: 14px;
 }
 
 ul {
@@ -218,6 +228,16 @@ label.error::before {
 	border-radius: 8px;
 	background-color: var(--color-primary);
 }
+.inline-btn {
+	position: relative;
+	display: inline-block;
+	font-size: 12px;
+	font-family: var(--body-font);
+	font-weight: var(--font-semi-bold);
+	line-height: 1;
+	text-decoration: underline;
+	color: var(--color-primary);
+}
 
 /**----------------------------------------
 START: Page Header
@@ -279,6 +299,51 @@ START: Page Header
 .login-page .page_header,
 .register-page .page_header {
 	margin-bottom: 33px;
+}
+
+.page.home-page {
+	padding-top: 65px;
+	padding-bottom: 0px;
+}
+.page.home-page .page_header {
+	margin-bottom: 50px;
+}
+.page_navigation {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 16px;
+}
+.page_navigation .user_img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.15);
+}
+.page_navigation .user_img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.page_navigation .menu_bar {
+	width: 35px;
+}
+.page_navigation .menu_bar a {
+	display: inline-flex;
+	width: 100%;
+	align-items: center;
+	justify-content: end;
+}
+.page_navigation .app_logo {
+	max-width: 65px;
+	width: 100%;
+}
+.navigation_content .title {
+	margin-bottom: 0;
+	color: var(--color-white);
 }
 /* !END: Page Header */
 
@@ -366,6 +431,63 @@ START: Login Register Form
 	margin-top: 25px;
 }
 /* !END: Login Register Form */
+
+/**----------------------------------------
+START: Reward Box
+----------------------------------------*/
+.reward_box {
+	background-color: var(--color-white);
+}
+.reward_box_inner {
+	background-color: var(--color-white);
+	border-radius: 10px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.13);
+	padding: 13px 15px;
+	position: relative;
+	z-index: 2;
+	top: -35px;
+}
+.reward_box_inner .member_id {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: space-between;
+}
+.reward_box_inner .member_id .id {
+	display: inline-block;
+	color: var(--color-black);
+	font-weight: var(--font-medium);
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 1;
+}
+.reward_box_inner .total_points {
+	display: flex;
+	align-items: end;
+	flex-wrap: wrap;
+	gap: 15px;
+	justify-content: space-between;
+	margin-top: 18px;
+}
+.reward_box_inner .total_points .point {
+	margin-bottom: 0;
+	line-height: 1;
+}
+.reward_box_inner .total_points .point span {
+	display: block;
+	font-size: 11px;
+	font-weight: var(--font-medium);
+	color: rgba(7, 7, 7, 0.4);
+	margin-top: 5px;
+}
+.reward_box_inner .total_points .primary-btn {
+	font-size: 14px;
+	gap: 5px;
+	padding: 9px 12px;
+	border-radius: 5px;
+}
+/* !END: Reward Box */
 
 /**----------------------------------------
 START: Page Header
