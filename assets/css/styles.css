@@ -11,6 +11,7 @@
 	--color-text-secondary: #6b7280;
 	--color-placeholder: #9ca3af;
 	--color-border: #9ca3af;
+	--color-border-2: #e6e8f0;
 	--color-red: #ee1d1d;
 
 	/*===== Font and typography =====*/
@@ -84,6 +85,7 @@ ul {
 
 a {
 	text-decoration: none;
+	color: var(--color-primary);
 }
 
 img {
@@ -209,6 +211,40 @@ START: Page Header
 .page {
 	padding-top: 80px;
 	padding-bottom: 40px;
+	position: relative;
+	z-index: 1;
+}
+.page .page_top_shape .left,
+.page .page_top_shape .right,
+.page .page_bottom_shape .left,
+.page .page_bottom_shape .right {
+	position: absolute;
+	z-index: -1;
+	opacity: 0.1;
+}
+.page .page_top_shape .right {
+	max-width: 107px;
+	width: 100%;
+	top: 45px;
+	right: 0;
+}
+.page .page_top_shape .left {
+	max-width: 112px;
+	width: 100%;
+	top: 165px;
+	left: 0;
+}
+.page .page_bottom_shape .right {
+	max-width: 145px;
+	width: 100%;
+	top: 625px;
+	right: 0;
+}
+.page .page_bottom_shape .left {
+	max-width: 123px;
+	width: 100%;
+	top: 659px;
+	left: 0;
 }
 .app_logo .logo {
 	display: inline-block;
@@ -225,10 +261,12 @@ START: Page Header
 .header_content p:last-child {
 	margin-bottom: 0;
 }
-.page.login-page {
+.page.login-page,
+.page.register-page {
 	background-color: var(--color-primary);
 }
-.login-page .page_header {
+.login-page .page_header,
+.register-page .page_header {
 	margin-bottom: 33px;
 }
 /* !END: Page Header */
@@ -266,6 +304,32 @@ START: Login Register Form
 	text-transform: uppercase;
 	color: var(--color-white);
 	margin-bottom: 0;
+}
+.form_alternative {
+	border-top: 1px solid var(--color-border-2);
+	margin-top: 20px;
+	padding-top: 21px;
+
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 16px;
+}
+.form_alternative a {
+	font-size: 14px;
+	line-height: 1;
+	position: relative;
+	z-index: 1;
+}
+.form_alternative a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 1px;
+	background-color: var(--color-primary);
+	opacity: 0.4;
 }
 /* !END: Login Register Form */
 
