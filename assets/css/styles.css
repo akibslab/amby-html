@@ -227,6 +227,7 @@ START: Page Header
 	padding-bottom: 40px;
 	position: relative;
 	z-index: 1;
+	background-color: var(--color-primary);
 }
 .page .page_top_shape .left,
 .page .page_top_shape .right,
@@ -274,10 +275,6 @@ START: Page Header
 }
 .header_content p:last-child {
 	margin-bottom: 0;
-}
-.page.login-page,
-.page.register-page {
-	background-color: var(--color-primary);
 }
 .login-page .page_header,
 .register-page .page_header {

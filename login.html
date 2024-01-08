@@ -25,12 +25,11 @@
       <img src="./assets/images/icons/page-right-bottom.svg" alt="" class="right">
     </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-
-          <!-- page header -->
-          <div class="page_header text-center">
+    <!-- page header -->
+    <div class="page_header text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col">
             <div class="app_logo">
               <a href="index.html" class="logo"><img src="./assets/images/logo/logo.png" alt=""></a>
             </div>
@@ -38,40 +37,48 @@
               <p>Empowering Wellness and Longevity through Rewards</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- login form -->
-          <div class="login_register_form login">
-            <h2 class="form_title">Log in</h2>
-            <div class="form_desc">
-              <p>Sign in on the internal platform</p>
+    <!-- login form -->
+    <div class="login_register login">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="login_register_form">
+              <h2 class="form_title">Log in</h2>
+              <div class="form_desc">
+                <p>Sign in on the internal platform</p>
+              </div>
+
+              <form action="#" class="login_form">
+                <div class="form_group">
+                  <label for="email">Email address</label>
+                  <input type="email" name="email" id="email" placeholder="Email address">
+                </div>
+
+                <div class="form_group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="password">
+                  <label class="error">Sorry, the email or password you entered is incorrect. Please try again.</label>
+                </div>
+
+                <div class="form_btn">
+                  <button class="primary-btn" type="submit">Log In</button>
+                </div>
+              </form>
+
+              <div class="form_alternative">
+                <a href="#" class="crate_account">Create account</a>
+                <a href="#" class="forgot_password">Forgot password</a>
+              </div>
             </div>
 
-            <form action="#" class="login_form">
-              <div class="form_group">
-                <label for="email">Email address</label>
-                <input type="email" name="email" id="email" placeholder="Email address">
-              </div>
-
-              <div class="form_group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                <label class="error">Sorry, the email or password you entered is incorrect. Please try again.</label>
-              </div>
-
-              <div class="form_btn">
-                <button class="primary-btn" type="submit">Log In</button>
-              </div>
-            </form>
-
-            <div class="form_alternative">
-              <a href="#" class="crate_account">Create account</a>
-              <a href="#" class="forgot_password">Forgot password</a>
+            <!-- app domain -->
+            <div class="app_domain text-center">
+              <h3 class="domain">ambywell.com</h3>
             </div>
-          </div>
-
-          <!-- app domain -->
-          <div class="app_domain text-center">
-            <h3 class="domain">ambywell.com</h3>
           </div>
         </div>
       </div>
