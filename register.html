@@ -45,22 +45,50 @@
               <p>Register on the internal platform</p>
             </div>
 
-            <form action="#" class="login_form">
+            <form action="#" class="register_form">
               <div class="form_group">
                 <label for="email">Email address</label>
-                <input type="email" name="email" id="email" placeholder="Email address">
+                <input type="email" name="email" id="email" placeholder="Enter your email address">
+                <label class="error">Please enter a properly formatted email.</label>
               </div>
 
               <div class="form_group">
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password">
-                <label class="error">Sorry, the email or password you entered is incorrect. Please try again.</label>
+                <label class="error">All password must be 8-32 characters long.</label>
+              </div>
+
+              <div class="form_group">
+                <label for="cpassword">Confirm password</label>
+                <input type="password" name="cpassword" id="cpassword">
+                <label class="error">Please make sure the passwords match.</label>
+              </div>
+
+              <div class="form_group">
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <label class="error">Please only enter letters</label>
+              </div>
+
+              <div class="form_group">
+                <label for="phone">Your mobile number</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter your mobile number">
+                <label class="error">Please enter only 8-digit Hong Kong number </label>
+              </div>
+
+              <div class="form_group checkbox">
+                <input type="checkbox" name="terms" id="terms">
+                <label for="terms">I have read the <a href="#">Terms and Conditions</a></label>
               </div>
 
               <div class="form_btn">
-                <button class="primary-btn" type="submit">Log In</button>
+                <button class="primary-btn" type="submit">Register</button>
               </div>
             </form>
+
+            <div class="form_alternative">
+              <a href="#" class="have_account">Already having an account?</a>
+            </div>
           </div>
 
           <!-- app domain -->

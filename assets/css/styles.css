@@ -130,6 +130,9 @@ label {
 	font-weight: var(--font-semi-bold);
 	margin-bottom: 4px;
 }
+label a {
+	color: #b24501;
+}
 
 select,
 .nice-select,
@@ -143,9 +146,19 @@ textarea {
 	border-radius: 8px;
 	font-size: 16px;
 	line-height: 1;
+	font-family: var(--body-font);
 	font-weight: var(--font-medium);
 	color: var(--color-text-primary);
-	padding: 18px 12px;
+	padding: 15px 12px;
+}
+input[type="checkbox"] {
+	display: inline-block;
+	margin: 0;
+}
+input[type="checkbox"] + label {
+	margin-bottom: 0;
+	display: inline-block;
+	font-size: 14px;
 }
 ::-ms-input-placeholder {
 	color: var(--color-placeholder);
@@ -198,8 +211,9 @@ label.error::before {
 	z-index: 1;
 	font-size: 15px;
 	color: var(--color-white);
+	font-family: var(--body-font);
 	font-weight: var(--font-semi-bold);
-	padding: 15px 13px;
+	padding: 13px 13px;
 	border: none;
 	border-radius: 8px;
 	background-color: var(--color-primary);
@@ -291,6 +305,11 @@ START: Login Register Form
 .form_group {
 	margin-bottom: 15px;
 }
+.form_group.checkbox {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
 .form_btn {
 	margin-top: 20px;
 }
@@ -330,6 +349,24 @@ START: Login Register Form
 	height: 1px;
 	background-color: var(--color-primary);
 	opacity: 0.4;
+}
+.register_form .form_group {
+	margin-bottom: 23px;
+}
+.register_form .form_group.checkbox {
+	margin-top: 30px;
+}
+.register_form .form_group label.error {
+	margin-top: 10px;
+}
+.register_form .form_btn {
+	margin-top: 30px;
+}
+.page.register-page {
+	padding-bottom: 50px;
+}
+.register-page .app_domain {
+	margin-top: 25px;
 }
 /* !END: Login Register Form */
 
