@@ -291,7 +291,7 @@ START: Page Header
 .page {
 	min-height: 100vh;
 	padding-top: 80px;
-	padding-bottom: 40px;
+	padding-bottom: 80px;
 	position: relative;
 	z-index: 1;
 	background-color: var(--color-primary);
@@ -353,7 +353,6 @@ START: Page Header
 
 .page.home-page {
 	padding-top: 65px;
-	padding-bottom: 0px;
 }
 .page.home-page .page_header {
 	margin-bottom: 50px;
@@ -452,6 +451,9 @@ START: Toolbar
 /**----------------------------------------
 START: Login Register Form
 ----------------------------------------*/
+.page.login-page {
+	padding-bottom: 40px;
+}
 .login_register_form {
 	background-color: var(--color-white);
 	padding: 32px 25px;
@@ -631,6 +633,7 @@ START: Challenges Section
 ----------------------------------------*/
 .challenges_section {
 	padding-top: 20px;
+	padding-bottom: 20px;
 	overflow: hidden;
 }
 .challenges_section .challenges_wrapper .container {
@@ -742,7 +745,7 @@ START: Challenges Section
 START: Getting Rewards Section
 ----------------------------------------*/
 .getting_rewards_section {
-	padding-top: 10px;
+	padding-bottom: 20px;
 	overflow: hidden;
 }
 .getting_rewards_wrapper .container {
