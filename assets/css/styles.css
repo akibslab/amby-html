@@ -170,25 +170,54 @@ input[type="checkbox"] + label {
 	display: inline-block;
 	font-size: 14px;
 }
-::-ms-input-placeholder {
-	color: var(--color-placeholder);
-}
 
 ::-webkit-input-placeholder {
 	color: var(--color-placeholder);
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
-
+:-moz-placeholder {
+	color: var(--color-placeholder);
+	opacity: 1;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
 ::-moz-placeholder {
 	color: var(--color-placeholder);
+	opacity: 1;
+	-moz-transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 :-ms-input-placeholder {
 	color: var(--color-placeholder);
+	opacity: 1;
+	-ms-transition: opacity 0.5s;
+	transition: opacity 0.5s;
 }
 
 ::placeholder {
 	color: var(--color-placeholder);
+	opacity: 1;
+	transition: opacity 0.5s;
 }
+*:focus::-webkit-input-placeholder {
+	opacity: 0;
+}
+*:focus:-moz-placeholder {
+	opacity: 0;
+}
+*:focus::-moz-placeholder {
+	opacity: 0;
+}
+*:focus:-ms-input-placeholder {
+	opacity: 0;
+}
+*:focus::placeholder {
+	opacity: 0;
+}
+
 label.error {
 	color: var(--color-red);
 	font-weight: var(--font-medium);
@@ -243,6 +272,7 @@ label.error::before {
 START: Page Header
 ----------------------------------------*/
 .page {
+	min-height: 100vh;
 	padding-top: 80px;
 	padding-bottom: 40px;
 	position: relative;
@@ -369,7 +399,7 @@ START: Login Register Form
 }
 .form_group.checkbox {
 	display: flex;
-	align-items: center;
+	align-items: start;
 	gap: 8px;
 }
 .form_btn {
