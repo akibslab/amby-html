@@ -267,6 +267,24 @@ label.error::before {
 	color: var(--color-primary);
 }
 
+.section_title {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 15px;
+	padding-bottom: 8px;
+}
+.section_title .title {
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+.section_title .inline-btn {
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: var(--font-medium);
+}
+
 /**----------------------------------------
 START: Page Header
 ----------------------------------------*/
@@ -378,6 +396,58 @@ START: Page Header
 	color: var(--color-white);
 }
 /* !END: Page Header */
+
+/**----------------------------------------
+START: Toolbar 
+----------------------------------------*/
+.toolbar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	overflow: hidden;
+
+	background-color: var(--color-white);
+	box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.05);
+	padding: 16px 18px;
+}
+.toolbar .toolbar_inner {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+.toolbar .toolbar_inner .toolbar_item {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.toolbar .toolbar_inner .toolbar_item .icon {
+	max-width: 24px;
+	margin-bottom: 5px;
+}
+.toolbar .toolbar_inner .toolbar_item .icon img {
+	filter: grayscale(1);
+	opacity: 0.8;
+	transition: opacity 0.4s;
+}
+.toolbar .toolbar_inner .toolbar_item.active .icon img {
+	filter: grayscale(0);
+	opacity: 1;
+}
+.toolbar .toolbar_inner .toolbar_item .title {
+	display: block;
+	font-size: 13px;
+	font-family: var(--body-font);
+	font-weight: var(--font-medium);
+	color: #9c9c9c;
+	transition: 0.4s;
+}
+.toolbar .toolbar_inner .toolbar_item.active .title {
+	color: var(--color-primary);
+}
+/* !END: Toolbar */
 
 /**----------------------------------------
 START: Login Register Form
@@ -527,6 +597,20 @@ START: Countdown Section
 	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.13);
 	border-radius: 10px;
 	padding: 13px 15px;
+	position: relative;
+	z-index: 1;
+}
+.countdown_content::after {
+	content: "";
+	position: absolute;
+	right: 10px;
+	top: 0;
+	max-width: 125px;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/icons/countdown-heart.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .countdown_content .subtitle {
 	display: block;
@@ -541,6 +625,190 @@ START: Countdown Section
 	color: var(--color-white);
 }
 /* !END: Countdown Section */
+
+/**----------------------------------------
+START: Challenges Section
+----------------------------------------*/
+.challenges_section {
+	padding-top: 20px;
+	overflow: hidden;
+}
+.challenges_section .challenges_wrapper .container {
+	padding-right: 0;
+}
+.challenges_items {
+	display: flex;
+	gap: 10px;
+	overflow-y: auto;
+}
+.challenges_items .challenges_item:last-child {
+	margin-right: 20px;
+}
+.challenges_item {
+	flex: 0 0 230px;
+	max-width: 230px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 5px;
+}
+.challenges_item .challenge_img {
+	width: 100%;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.challenges_item .challenge_img img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.challenges_item .challenge_img::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 37.12%,
+		rgba(0, 0, 0, 0) 54.44%,
+		rgba(0, 0, 0, 0.52) 76.57%,
+		rgba(0, 0, 0, 0.7) 99.48%
+	);
+}
+.challenges_item .challenge_content .title {
+	margin: 0;
+}
+.challenges_item .challenge_content .points {
+	display: block;
+	font-size: 12px;
+	font-weight: var(--font-medium);
+	color: var(--color-primary);
+}
+.challenges_item .challenge_img .heart {
+	position: absolute;
+	max-width: 17px;
+	width: 100%;
+	height: auto;
+	right: 15px;
+	top: 15px;
+	z-index: 2;
+}
+.challenges_item .challenge_img .heart img,
+.challenges_item .challenge_img .category img {
+	height: auto;
+	width: auto;
+}
+.challenges_item .challenge_img .category {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	background-color: #0eb059;
+	color: var(--color-white);
+	border-radius: 5px;
+	padding: 6px;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: var(--font-normal);
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+.challenges_item .challenge_img .end_text {
+	display: inline-flex;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.5);
+	color: var(--color-white);
+	font-size: 10px;
+	line-height: 1;
+	font-weight: var(--font-normal);
+	padding: 7px 4px;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	z-index: 2;
+}
+/* !END: Challenges Section */
+
+/**----------------------------------------
+START: Getting Rewards Section
+----------------------------------------*/
+.getting_rewards_section {
+	padding-top: 10px;
+	overflow: hidden;
+}
+.getting_rewards_wrapper .container {
+	padding-right: 0;
+}
+.getting_rewards_items {
+	display: flex;
+	gap: 10px;
+	overflow-y: auto;
+}
+.getting_rewards_items .getting_rewards_item:last-child {
+	margin-right: 20px;
+}
+.getting_rewards_item {
+	flex: 0 0 143px;
+	max-width: 143px;
+	background-color: var(--color-white);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.13);
+	margin-bottom: 5px;
+}
+.getting_rewards_item .getting_reward_img {
+	width: 100%;
+}
+.getting_rewards_item .getting_reward_img img {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+}
+.getting_rewards_item .getting_reward_content {
+	padding: 10px 7px;
+}
+.getting_rewards_item .getting_reward_content .title {
+	font-size: 12px;
+	font-weight: var(--font-bold);
+	margin: 0;
+}
+.getting_rewards_item .getting_reward_content .subtitle {
+	display: block;
+	font-size: 10px;
+	line-height: 1;
+	font-weight: var(--font-medium);
+	color: var(--color-primary);
+}
+.getting_rewards_item .getting_reward_content .points {
+	font-size: 10px;
+	display: block;
+	line-height: 1.2;
+	color: var(--color-text-primary);
+	margin-top: 2px;
+}
+.getting_rewards_item .getting_reward_content .reward_meta {
+	font-size: 8px;
+	line-height: 1.2;
+	color: rgba(7, 7, 7, 0.5);
+	margin-top: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 3px;
+}
+.getting_rewards_item .getting_reward_content .reward_meta span {
+	display: inline-block;
+}
+/* !END: Getting Rewards Section */
 
 /**----------------------------------------
 START: Page Header
