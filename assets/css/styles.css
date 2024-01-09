@@ -239,7 +239,6 @@ label.error::before {
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 .primary-btn {
 	display: inline-flex;
 	align-items: center;
@@ -278,6 +277,9 @@ START: Page Header
 	position: relative;
 	z-index: 1;
 	background-color: var(--color-primary);
+}
+.page .white-bg {
+	background-color: var(--color-white);
 }
 .page .page_top_shape .left,
 .page .page_top_shape .right,
@@ -465,9 +467,6 @@ START: Login Register Form
 /**----------------------------------------
 START: Reward Box
 ----------------------------------------*/
-.reward_box {
-	background-color: var(--color-white);
-}
 .reward_box_inner {
 	background-color: var(--color-white);
 	border-radius: 10px;
@@ -476,6 +475,7 @@ START: Reward Box
 	position: relative;
 	z-index: 2;
 	top: -35px;
+	margin-bottom: -19px;
 }
 .reward_box_inner .member_id {
 	display: flex;
@@ -518,6 +518,29 @@ START: Reward Box
 	border-radius: 5px;
 }
 /* !END: Reward Box */
+
+/**----------------------------------------
+START: Countdown Section
+----------------------------------------*/
+.countdown_content {
+	background-color: var(--color-primary);
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.13);
+	border-radius: 10px;
+	padding: 13px 15px;
+}
+.countdown_content .subtitle {
+	display: block;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: var(--color-white);
+	font-weight: var(--font-medium);
+}
+.countdown_content .title {
+	margin-bottom: 0;
+	font-weight: var(--font-bold);
+	color: var(--color-white);
+}
+/* !END: Countdown Section */
 
 /**----------------------------------------
 START: Page Header
