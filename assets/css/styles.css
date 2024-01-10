@@ -426,14 +426,13 @@ START: Toolbar
 	max-width: 24px;
 	margin-bottom: 5px;
 }
-.toolbar .toolbar_inner .toolbar_item .icon img {
-	filter: grayscale(1);
-	opacity: 0.8;
-	transition: opacity 0.4s;
+.toolbar .toolbar_inner .toolbar_item.active .icon .stock,
+.toolbar .toolbar_inner .toolbar_item .icon .fill {
+	display: none;
 }
-.toolbar .toolbar_inner .toolbar_item.active .icon img {
-	filter: grayscale(0);
-	opacity: 1;
+.toolbar .toolbar_inner .toolbar_item .icon .stock,
+.toolbar .toolbar_inner .toolbar_item.active .fill {
+	display: block;
 }
 .toolbar .toolbar_inner .toolbar_item .title {
 	display: block;
