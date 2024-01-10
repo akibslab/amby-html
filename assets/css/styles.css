@@ -574,6 +574,7 @@ START: Reward Box
 }
 .reward_box_inner .total_points .point {
 	margin-bottom: 0;
+	font-size: 34px;
 	line-height: 1;
 }
 .reward_box_inner .total_points .point span {
@@ -581,7 +582,7 @@ START: Reward Box
 	font-size: 11px;
 	font-weight: var(--font-medium);
 	color: rgba(7, 7, 7, 0.4);
-	margin-top: 5px;
+	margin-top: 10px;
 }
 .reward_box_inner .total_points .primary-btn {
 	font-size: 14px;
@@ -694,6 +695,7 @@ START: Challenges Section
 	font-size: 12px;
 	font-weight: var(--font-medium);
 	color: var(--color-primary);
+	margin-top: 5px;
 }
 .challenges_item .challenge_img .heart {
 	position: absolute;
@@ -760,8 +762,8 @@ START: Getting Rewards Section
 	margin-right: 20px;
 }
 .getting_rewards_item {
-	flex: 0 0 143px;
-	max-width: 143px;
+	flex: 0 0 155px;
+	max-width: 155px;
 	background-color: var(--color-white);
 	border-radius: 10px;
 	overflow: hidden;
@@ -777,30 +779,31 @@ START: Getting Rewards Section
 	object-fit: cover;
 }
 .getting_rewards_item .getting_reward_content {
-	padding: 10px 7px;
+	padding: 10px 8px;
 }
 .getting_rewards_item .getting_reward_content .title {
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: var(--font-bold);
 	margin: 0;
+	line-height: 1;
 }
 .getting_rewards_item .getting_reward_content .subtitle {
 	display: block;
 	font-size: 10px;
-	line-height: 1;
+	line-height: 15px;
 	font-weight: var(--font-medium);
 	color: var(--color-primary);
 }
 .getting_rewards_item .getting_reward_content .points {
 	font-size: 10px;
 	display: block;
-	line-height: 1.2;
+	line-height: 15px;
 	color: var(--color-text-primary);
 	margin-top: 2px;
 }
 .getting_rewards_item .getting_reward_content .reward_meta {
 	font-size: 8px;
-	line-height: 1.2;
+	line-height: 1;
 	color: rgba(7, 7, 7, 0.5);
 	margin-top: 5px;
 	display: flex;
