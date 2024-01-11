@@ -2,6 +2,29 @@
 	"use strict";
 
 	$(document).ready(function () {
+		// Sticky Header
+		var lastScrollTop = 0;
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+
+			if (scroll > 200) {
+				$("header.header-2").addClass("sticky");
+				$("header.header-2").removeClass("sticky-out");
+			} else if (scroll < lastScrollTop) {
+				if (scroll < 200) {
+					$("header.header-2").addClass("sticky-out");
+					$("header.header-2").removeClass("sticky");
+				}
+			} else {
+				$("header.header-2").removeClass("sticky");
+			}
+
+			// console.log("lastScrollTop: " + lastScrollTop + " | scroll: " + scroll);
+
+			lastScrollTop = scroll;
+		});
+		// end: Sticky Header
+
 		// toolbar active class
 		$(".toolbar_inner .toolbar_item").on("click", function () {
 			$(this).siblings().removeClass("active");
