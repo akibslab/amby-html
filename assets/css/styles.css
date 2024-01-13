@@ -1183,6 +1183,54 @@ START: Challenges Page
 /* !END: Challenges Page */
 
 /**----------------------------------------
+START: Challenges Page
+----------------------------------------*/
+.page.rewards .page_header {
+	padding-bottom: 23px;
+}
+.rewards_section.white-bg {
+	padding-top: 10px;
+	padding-bottom: 0;
+	padding-bottom: 20px;
+}
+.rewards .getting_rewards_item {
+	max-width: 100%;
+	margin-bottom: 0;
+}
+.rewards .getting_rewards_item .getting_reward_img img {
+	height: 160px;
+}
+.rewards .getting_rewards_item .getting_reward_content {
+	padding: 14px 20px;
+}
+.rewards .getting_rewards_item .getting_reward_content .title {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: var(--font-semi-bold);
+}
+.rewards .getting_rewards_item .getting_reward_content .subtitle {
+	font-size: 14px;
+	font-weight: var(--font-semi-bold);
+	line-height: 21px;
+}
+.rewards .getting_rewards_item .getting_reward_content .points {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: var(--font-medium);
+	margin-top: 10px;
+}
+.rewards .getting_rewards_item .getting_reward_content .reward_meta {
+	font-size: 12px;
+	font-weight: var(--font-medium);
+	margin-top: 0;
+	line-height: 18px;
+}
+.rewards .getting_rewards_item:not(:last-child) {
+	margin-bottom: 20px;
+}
+/* !END: Page Header */
+
+/**----------------------------------------
 START: Page Header
 ----------------------------------------*/
 
