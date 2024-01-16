@@ -1539,6 +1539,7 @@ START: Category Page
 /**----------------------------------------
 START: Submission Page
 ----------------------------------------*/
+.page.single-button .page_header,
 .page.submission .page_header {
 	background-color: var(--color-primary);
 	padding-bottom: 22px;
@@ -1549,6 +1550,7 @@ START: Submission Page
 	position: relative;
 	z-index: 1;
 }
+.page.single-button .page_header::after,
 .page.submission .page_header::after {
 	content: "";
 	position: absolute;
@@ -1624,6 +1626,31 @@ START: Submission Page
 	align-items: center;
 	justify-content: center;
 	background-color: #fafafa;
+}
+.page.single-button .page_header {
+	padding-bottom: 32px;
+}
+.page.single-button .page_header .navigation_content .title {
+	font-size: 22px;
+}
+.page.single-button .page_header .navigation_content .desc {
+	max-width: 100%;
+	font-size: 15px;
+}
+.single_button_section {
+	padding-top: 180px;
+	text-align: center;
+}
+.single_button_section .button_tagline {
+	display: block;
+	font-size: 12px;
+	line-height: 15.6px;
+	font-weight: var(--font-medium);
+	color: var(--color-primary);
+	margin-top: 10px;
+}
+.single_button_section .primary-btn {
+	padding: 9px 27px;
 }
 /* !END: Submission Page */
 
