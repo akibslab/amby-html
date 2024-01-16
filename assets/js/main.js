@@ -2,6 +2,19 @@
 	"use strict";
 
 	$(document).ready(function () {
+		// Data CSS Js
+		$("[data-background").each(function () {
+			$(this).css(
+				"background-image",
+				"url( " + $(this).attr("data-background") + "  )"
+			);
+		});
+
+		// Nice Select
+		if ($("select").length > 0) {
+			$("select").niceSelect();
+		}
+
 		// Sticky Header
 		var lastScrollTop = 0;
 		$(window).scroll(function () {
