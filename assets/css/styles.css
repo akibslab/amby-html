@@ -1655,7 +1655,97 @@ START: Submission Page
 /* !END: Submission Page */
 
 /**----------------------------------------
-START: Page Header
+START: Thank You Page
 ----------------------------------------*/
-
-/* !END: Page Header */
+.page.thank-you .page_header {
+	background-color: var(--color-primary);
+}
+.thank_you_section {
+	padding-top: 25px;
+}
+.thank_you_section .welcome_points {
+	height: 140px;
+	background-image: url(../images/icons/confetti.svg);
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: end;
+	justify-content: center;
+	padding-bottom: 19px;
+}
+.thank_you_section .welcome_points .title {
+	margin-bottom: 0;
+	font-size: 36px;
+	font-weight: var(--font-bold);
+	color: var(--color-primary);
+}
+.thank_you_section .welcome_content {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.thank_you_section .welcome_content .title {
+	margin-bottom: 10px;
+}
+.thank_you_section .welcome_content .desc {
+	margin-bottom: 0;
+	font-size: 13px;
+	line-height: 21px;
+}
+.thank_you_section .history_content .title {
+	font-size: 16px;
+	line-height: 23.4px;
+	font-weight: var(--font-bold);
+	color: var(--color-primary);
+	margin-bottom: 15px;
+}
+.thank_you_section .history_content .history_info {
+	display: flex;
+	align-items: start;
+	gap: 10px;
+	justify-content: space-between;
+}
+.thank_you_section .history_content .history_info li {
+	display: block;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: var(--font-medium);
+	color: var(--color-text-secondary);
+}
+.thank_you_section .history_content .history_info .inline-btn {
+	font-size: 14px;
+	line-height: 18.6px;
+}
+.thank_you_section .thank_you_buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 40px;
+}
+.thank_you_section .thank_you_close {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	margin-top: 60px;
+}
+.thank_you_section .thank_you_close .close_icon {
+	width: 55px;
+	height: 55px;
+	background-color: var(--color-primary);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+.thank_you_section .thank_you_close .text {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 20.8px;
+	font-weight: var(--font-semi-bold);
+	color: var(--color-primary);
+	text-decoration: underline;
+}
+/* !END: Thank You Page */
