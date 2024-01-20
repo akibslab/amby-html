@@ -626,7 +626,8 @@ START: Page Header
 }
 .hamburger_menu {
 	position: fixed;
-	width: calc(100% - 60px);
+	max-width: 280px;
+	width: 100%;
 	height: 100%;
 	top: 0;
 	right: 0;
